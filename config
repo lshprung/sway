@@ -20,20 +20,21 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
-# volume script path
+# script paths
 set $volume_script ~/.config/sway/scripts/volume.sh
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+exec_always swaybg -i $(shuf -e /usr/share/backgrounds/gnome/* | head -n 1)
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 scale 1.2
+#output eDP-1 scale 1.2
 
 ### Idle configuration
 #
@@ -272,13 +273,13 @@ bindsym $mod+c exec sensible-browser
 bindsym $mod+q exec qutebrowser
 
 # Open Spectacle
-bindsym $mod+x exec spectacle
+bindsym $mod+x exec xfce4-screenshooter
 
 # Open Appfinder
 bindsym $mod+Shift+d exec xfce4-appfinder
 
 ## Custom Window Decorations
-font pango 10
+#font pango 10
 # class        border  backgr. text     indicator
 client.focused #CC9900 #996600 #ffffff  #006600
 
