@@ -115,10 +115,10 @@ command=amixer -D pulse get Master | grep -E -o '[0-9]*%' | sed 1q
 color=#FFAA00
 signal=10
 
-#[audio_source]
-#label=SRC
-#command=~/Documents/scripts/i3blocks/audio_source
-#signal=10
+[audio_source]
+label=SRC
+command=~/.config/sway/i3blocks/audio_source
+signal=10
 
 #[screensaver]
 #label=DPMS

@@ -22,6 +22,7 @@ set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # script paths
 set $volume_script ~/.config/sway/scripts/volume.sh
+set $toggle_audio_script ~/.config/sway/scripts/toggle_audio.sh
 
 ### Output configuration
 #
@@ -210,6 +211,7 @@ mode "volume" {
 		bindsym Up exec $volume_script up && pkill -RTMIN+10 i3blocks
 		bindsym Down exec $volume_script down && pkill -RTMIN+10 i3blocks
 		bindsym m exec $volume_script mute && pkill -RTMIN+10 i3blocks
+		bindsym t exec $toggle_audio_script && pkill -RTMIN+10 i3blocks
 
 		bindsym 1 exec $volume_script 10 && pkill -RTMIN+10 i3blocks
 		bindsym 2 exec $volume_script 20 && pkill -RTMIN+10 i3blocks

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+SRC_HEADPHONES="alsa_output.usb-FiiO_DigiHug_USB_Audio-01.analog-stereo"
+SRC_SPEAKERS="alsa_output.pci-0000_00_1b.0.analog-stereo"
+
+if [ "$(pactl get-default-sink)" = "$SRC_HEADPHONES" ]; then
+	pactl set-default-sink "$SRC_SPEAKERS"
+else
+	pactl set-default-sink "$SRC_HEADPHONES"
+fi
