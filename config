@@ -209,21 +209,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "volume" {
-		bindsym Up exec $volume_script up && pkill -RTMIN+10 i3blocks
-		bindsym Down exec $volume_script down && pkill -RTMIN+10 i3blocks
-		bindsym m exec $volume_script mute && pkill -RTMIN+10 i3blocks
-		bindsym t exec $toggle_audio_script && pkill -RTMIN+10 i3blocks
+		bindsym Up exec $volume_script up && pkill -RTMIN+10 waybar
+		bindsym Down exec $volume_script down && pkill -RTMIN+10 waybar
+		bindsym m exec $volume_script mute && pkill -RTMIN+10 waybar
+		bindsym t exec $toggle_audio_script && pkill -RTMIN+10 waybar
 
-		bindsym 1 exec $volume_script 10 && pkill -RTMIN+10 i3blocks
-		bindsym 2 exec $volume_script 20 && pkill -RTMIN+10 i3blocks
-		bindsym 3 exec $volume_script 30 && pkill -RTMIN+10 i3blocks
-		bindsym 4 exec $volume_script 40 && pkill -RTMIN+10 i3blocks
-		bindsym 5 exec $volume_script 50 && pkill -RTMIN+10 i3blocks
-		bindsym 6 exec $volume_script 60 && pkill -RTMIN+10 i3blocks
-		bindsym 7 exec $volume_script 70 && pkill -RTMIN+10 i3blocks
-		bindsym 8 exec $volume_script 80 && pkill -RTMIN+10 i3blocks
-		bindsym 9 exec $volume_script 90 && pkill -RTMIN+10 i3blocks
-		bindsym 0 exec $volume_script 100 && pkill -RTMIN+10 i3blocks
+		bindsym 1 exec $volume_script 10 && pkill -RTMIN+10 waybar
+		bindsym 2 exec $volume_script 20 && pkill -RTMIN+10 waybar
+		bindsym 3 exec $volume_script 30 && pkill -RTMIN+10 waybar
+		bindsym 4 exec $volume_script 40 && pkill -RTMIN+10 waybar
+		bindsym 5 exec $volume_script 50 && pkill -RTMIN+10 waybar
+		bindsym 6 exec $volume_script 60 && pkill -RTMIN+10 waybar
+		bindsym 7 exec $volume_script 70 && pkill -RTMIN+10 waybar
+		bindsym 8 exec $volume_script 80 && pkill -RTMIN+10 waybar
+		bindsym 9 exec $volume_script 90 && pkill -RTMIN+10 waybar
+		bindsym 0 exec $volume_script 100 && pkill -RTMIN+10 waybar
 		
 		bindsym Return mode "default"
 		bindsym Escape mode "default"
@@ -256,21 +256,22 @@ mode "brightness" {
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-    status_command i3blocks -c ~/.config/sway/i3blocks/config
-
-    colors {
-        statusline #ffffff
-        background #444444
-		separator #888888
-        focused_workspace #666666 #888888 #ffffff
-    }
-}
+#bar {
+#    position top
+#
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    #status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+#    status_command i3blocks -c ~/.config/sway/i3blocks/config
+#
+#    colors {
+#        statusline #ffffff
+#        background #444444
+#		separator #888888
+#        focused_workspace #666666 #888888 #ffffff
+#    }
+#}
+exec waybar
 
 ## Application Launching Hotkeys
 
