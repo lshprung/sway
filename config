@@ -19,7 +19,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wmenu-run
 # script paths
 set $volume_script ~/.config/sway/scripts/volume.sh
 set $toggle_audio_script ~/.config/sway/scripts/toggle_audio.sh
